@@ -1,0 +1,56 @@
+{
+  "name": "ackee-lighthouse",
+  "private": true,
+  "version": "1.0.0",
+  "authors": [
+    "Tobias Reich <tobias@electerious.com>"
+  ],
+  "description": "Send Lighthouse reports to Ackee",
+  "keywords": [
+    "ackee",
+    "tracking",
+    "tracker",
+    "report",
+    "lighthouse",
+    "chrome",
+    "performance"
+  ],
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "eslint 'src/**/*.js'"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/electerious/ackee-lighthouse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/electerious/ackee-lighthouse.git"
+  },
+  "files": [
+    "src"
+  ],
+  "devDependencies": {
+    "@electerious/eslint-config": "^1.3.4",
+    "eslint": "^7.16.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-react": "^7.21.5",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-react-native": "^3.10.0",
+    "husky": "^4.3.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": "@electerious/eslint-config"
+  },
+  "dependencies": {
+    "chrome-launcher": "^0.13.4",
+    "dotenv": "^8.2.0",
+    "lighthouse": "^7.0.0",
+    "node-fetch": "^2.6.1"
+  }
+}
