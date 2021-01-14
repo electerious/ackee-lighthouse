@@ -2,7 +2,7 @@ name: Run
 
 on:
   # schedule:
-  # - cron:  '*/15 * * * *'
+    # - cron:  '*/15 * * * *'
 
 jobs:
   run:
@@ -10,20 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
 
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
-      with:
-        node-version: '14.x'
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
 
-    - name: Install dependencies
-      run: yarn --production --frozen-lockfile
+      - name: Install dependencies
+        run: yarn --production --frozen-lockfile
 
-    - name: Start script
-      env:
-        ACKEE_ENDPOINT: ${{ secrets.ACKEE_ENDPOINT }}
-        ACKEE_TOKEN: ${{ secrets.ACKEE_TOKEN }}
-        ACKEE_EVENT_ID: ${{ secrets.ACKEE_EVENT_ID }}
-        URL: ${{ secrets.URL }}
-      run: yarn start
+      - name: Start script
+        env:
+          ACKEE_ENDPOINT: ${{ secrets.ACKEE_ENDPOINT }}
+          ACKEE_TOKEN: ${{ secrets.ACKEE_TOKEN }}
+          ACKEE_EVENT_ID: ${{ secrets.ACKEE_EVENT_ID }}
+          URL: ${{ secrets.URL }}
+        run: yarn start
