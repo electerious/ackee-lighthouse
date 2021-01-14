@@ -1,11 +1,12 @@
 import dotenv from 'dotenv'
+
+dotenv.config()
+
 import { Headers } from 'node-fetch'
 import chromeLauncher from 'chrome-launcher'
 import lighthouse from 'lighthouse'
 
 import createAction from './api/createAction.js'
-
-dotenv.config()
 
 const runLighthouse = async (url, flags = {}, config = null) => {
 	const chrome = await chromeLauncher.launch(flags)
