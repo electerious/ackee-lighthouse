@@ -93,10 +93,10 @@
     lodash "^4.17.19"
     to-fast-properties "^2.0.0"
 
-"@electerious/eslint-config@^1.3.4":
-  version "1.3.5"
-  resolved "https://registry.yarnpkg.com/@electerious/eslint-config/-/eslint-config-1.3.5.tgz#43cdf1eea3647c1ba15c992263f6c3c7851f6388"
-  integrity sha512-cd3nkzOD5EYqRHrkCd/U0PZhBMOd2v2uHqISSyFskdw932ERNYHk/4MC6KWCOzfA+h1WjxTpKBAqdtYU+sxw4Q==
+"@electerious/eslint-config@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@electerious/eslint-config/-/eslint-config-1.4.0.tgz#e4b9fcb096d5f863c0255e5303d60c8277ccab0a"
+  integrity sha512-ziXxG2Szn2Y8M1corC2oU7TP3/kCKgxEPLcBaaFwWWJl4kuKszC0oi2+xpGPGDzasBPaAhzoIXBrDSJsItQjmQ==
 
 "@eslint/eslintrc@^0.2.2":
   version "0.2.2"
