@@ -53,7 +53,7 @@ const endpoint = process.env.ACKEE_ENDPOINT
 const token = process.env.ACKEE_TOKEN
 const events = process.env.ACKEE_EVENT_ID.split(',').map((eventId) => ({ id: eventId }))
 const urls = process.env.URL.split(',')
-const audit = process.env.AUDIT ?? 'speed-index.score'
+const audit = process.env.AUDIT ?? 'speed-index.numericValue'
 
 const headers = new Headers({
 	Authorization: `Bearer ${ token }`
