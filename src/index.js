@@ -24,6 +24,11 @@ const runLighthouse = async (url, flags = {}, config = null) => {
 const createReport = async (endpoint, headers, event, url, audit) => {
 	const lhr = await runLighthouse(url, {
 		chromeFlags: [ '--headless' ]
+	}, {
+		extends: 'lighthouse:default',
+		settings: {
+			extraHeaders: { Cookie: 'ackee_ignore=1' }
+		}
 	})
 
 	const speedIndex = lhr.audits[audit]
