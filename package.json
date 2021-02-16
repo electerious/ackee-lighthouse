@@ -51,7 +51,7 @@
     "chrome-launcher": "^0.13.4",
     "dot-prop": "^6.0.1",
     "dotenv": "^8.2.0",
-    "lighthouse": "^7.0.1",
+    "lighthouse": "^7.1.0",
     "node-fetch": "^2.6.1",
     "signale": "^1.4.0"
   }
