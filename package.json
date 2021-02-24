@@ -31,12 +31,12 @@
   ],
   "devDependencies": {
     "@electerious/eslint-config": "^1.4.0",
-    "eslint": "^7.16.0",
+    "eslint": "^7.20.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-react-native": "^3.10.0",
-    "husky": "^4.3.6"
+    "husky": "^4.3.8"
   },
   "husky": {
     "hooks": {
@@ -51,7 +51,7 @@
     "chrome-launcher": "^0.13.4",
     "dot-prop": "^6.0.1",
     "dotenv": "^8.2.0",
-    "lighthouse": "^7.0.0",
+    "lighthouse": "^7.1.0",
     "node-fetch": "^2.6.1",
     "signale": "^1.4.0"
   }
