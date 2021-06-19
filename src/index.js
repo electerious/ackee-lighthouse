@@ -12,17 +12,17 @@ import createAction from './api/createAction.js'
 
 const createReport = async (endpoint, headers, event, url, audit, browser) => {
 	const { lhr } = await lighthouse(url, {
-		port: browser.port
+		port: browser.port,
 	}, {
 		extends: 'lighthouse:default',
 		settings: {
-			extraHeaders: { Cookie: 'ackee_ignore=1' }
-		}
+			extraHeaders: { Cookie: 'ackee_ignore=1' },
+		},
 	})
 
 	const action = {
 		key: audit,
-		value: dotProp.get(lhr.audits, audit)
+		value: dotProp.get(lhr.audits, audit),
 	}
 
 	await createAction(endpoint, headers, event, action)
@@ -32,7 +32,7 @@ const createReport = async (endpoint, headers, event, url, audit, browser) => {
 
 const createReports = async (endpoint, headers, events, urls, audit) => {
 	const browser = await chromeLauncher.launch({
-		chromeFlags: [ '--headless' ]
+		chromeFlags: [ '--headless' ],
 	})
 
 	signale.start(`Headless browser running on port ${ browser.port }`)
@@ -56,7 +56,7 @@ const urls = process.env.URL.split(',')
 const audit = process.env.AUDIT ?? 'speed-index.numericValue'
 
 const headers = new Headers({
-	Authorization: `Bearer ${ token }`
+	Authorization: `Bearer ${ token }`,
 })
 
 createReports(endpoint, headers, events, urls, audit)

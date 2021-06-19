@@ -18,7 +18,8 @@
   "type": "module",
   "scripts": {
     "start": "node src/index.js",
-    "lint": "eslint 'src/**/*.js'"
+    "test": "npm run lint",
+    "lint": "eslint \"src/**/*.js\""
   },
   "license": "MIT",
   "homepage": "https://github.com/electerious/ackee-lighthouse",
@@ -29,30 +30,25 @@
   "files": [
     "src"
   ],
-  "devDependencies": {
-    "@electerious/eslint-config": "^1.4.0",
-    "eslint": "^7.20.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-react": "^7.21.5",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-react-native": "^3.10.0",
-    "husky": "^4.3.8"
+  "dependencies": {
+    "chrome-launcher": "^0.14.0",
+    "dot-prop": "^6.0.1",
+    "dotenv": "^10.0.0",
+    "lighthouse": "^8.0.0",
+    "node-fetch": "^2.6.1",
+    "signale": "^1.4.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
+  "devDependencies": {
+    "@electerious/eslint-config": "^2.0.2",
+    "eslint": "^7.29.0",
+    "eslint-plugin-ava": "^12.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-react": "^7.24.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-unicorn": "^33.0.1"
   },
   "eslintConfig": {
     "root": true,
     "extends": "@electerious/eslint-config"
-  },
-  "dependencies": {
-    "chrome-launcher": "^0.13.4",
-    "dot-prop": "^6.0.1",
-    "dotenv": "^8.2.0",
-    "lighthouse": "^7.1.0",
-    "node-fetch": "^2.6.1",
-    "signale": "^1.4.0"
   }
 }
