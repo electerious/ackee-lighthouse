@@ -20,6 +20,7 @@ ackee-lighthouse dependents on …
 
 - [Node.js](https://nodejs.org/en/) (v14 or newer)
 - [yarn](https://yarnpkg.com/en/)
+- [Chrome](https://www.google.com/chrome/index.html)
 
 Make sure to install and update all dependencies before you continue. The installation instructions for the individual dependencies can be found on the linked websites.
 
