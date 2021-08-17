@@ -34,18 +34,18 @@
     "chrome-launcher": "^0.14.0",
     "dot-prop": "^6.0.1",
     "dotenv": "^10.0.0",
-    "lighthouse": "^8.0.0",
+    "lighthouse": "^8.3.0",
     "node-fetch": "^2.6.1",
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "@electerious/eslint-config": "^2.0.2",
-    "eslint": "^7.29.0",
+    "@electerious/eslint-config": "^2.0.3",
+    "eslint": "^7.32.0",
     "eslint-plugin-ava": "^12.0.0",
-    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-import": "^2.24.0",
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "eslint-plugin-unicorn": "^33.0.1"
+    "eslint-plugin-unicorn": "^35.0.0"
   },
   "eslintConfig": {
     "root": true,
