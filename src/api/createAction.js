@@ -20,7 +20,9 @@ export default async (endpoint, event, action) => {
 		}),
 	})
 
-	const data = await response.json()
+	const text = await response.text()
+	console.log(text)
+	const data = JSON.parse(text)
 
 	if (data.errors != null) {
 		const message = data.errors[0].message
