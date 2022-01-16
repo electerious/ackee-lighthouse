@@ -23,7 +23,6 @@ jobs:
       - name: Start script
         env:
           ACKEE_ENDPOINT: ${{ secrets.ACKEE_ENDPOINT }}
-          ACKEE_TOKEN: ${{ secrets.ACKEE_TOKEN }}
           ACKEE_EVENT_ID: ${{ secrets.ACKEE_EVENT_ID }}
           URL: ${{ secrets.URL }}
         run: yarn start
