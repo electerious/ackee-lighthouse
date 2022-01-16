@@ -1,8 +1,9 @@
 import fetch from 'node-fetch'
 
-export default async (endpoint, event, action) => {
+export default async (endpoint, headers, event, action) => {
 	const response = await fetch(endpoint, {
 		method: 'post',
+		headers,
 		body: JSON.stringify({
 			query: `
 				mutation createAction($eventId: ID!, $input: CreateActionInput!) {
@@ -20,9 +21,7 @@ export default async (endpoint, event, action) => {
 		}),
 	})
 
-	const text = await response.text()
-	console.log(text)
-	const data = JSON.parse(text)
+	const data = await response.json()
 
 	if (data.errors != null) {
 		const message = data.errors[0].message

@@ -2,6 +2,7 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
+import { Headers } from 'node-fetch'
 import chromeLauncher from 'chrome-launcher'
 import lighthouse from 'lighthouse'
 import dotProp from 'dot-prop'
@@ -9,7 +10,7 @@ import dotProp from 'dot-prop'
 import signale from './utils/signale.js'
 import createAction from './api/createAction.js'
 
-const createReport = async (endpoint, event, url, audit, browser) => {
+const createReport = async (endpoint, headers, event, url, audit, browser) => {
 	const { lhr } = await lighthouse(url, {
 		port: browser.port,
 	}, {
@@ -24,12 +25,12 @@ const createReport = async (endpoint, event, url, audit, browser) => {
 		value: dotProp.get(lhr.audits, audit),
 	}
 
-	await createAction(endpoint, event, action)
+	await createAction(endpoint, headers, event, action)
 
 	return action.value
 }
 
-const createReports = async (endpoint, events, urls, audit) => {
+const createReports = async (endpoint, headers, events, urls, audit) => {
 	const browser = await chromeLauncher.launch({
 		chromeFlags: [ '--headless' ],
 	})
@@ -41,7 +42,7 @@ const createReports = async (endpoint, events, urls, audit) => {
 		const url = urls[index]
 
 		signale.await(`Running tests for ${ url }`)
-		const value = await createReport(endpoint, event, url, audit, browser)
+		const value = await createReport(endpoint, headers, event, url, audit, browser)
 		signale.success(`Reported value ${ value } for ${ url } to event ${ event.id }`)
 	}
 
@@ -53,4 +54,8 @@ const events = process.env.ACKEE_EVENT_ID.split(',').map((eventId) => ({ id: eve
 const urls = process.env.URL.split(',')
 const audit = process.env.AUDIT ?? 'speed-index.numericValue'
 
-createReports(endpoint, events, urls, audit)
+const headers = new Headers({
+	'Content-Type': 'application/json',
+})
+
+createReports(endpoint, headers, events, urls, audit)
