@@ -32,14 +32,12 @@ Examples:
 
 ```
 ACKEE_ENDPOINT=https://ackee.example.com/api
-ACKEE_TOKEN=944c15eb-bc63-4435-8df4-0e6573079bb1
 ACKEE_EVENT_ID=a26932b8-a088-4fc1-b723-c3ea5b9ba9e4
 URL=https://a.example.com
 ```
 
 ```
 ACKEE_ENDPOINT=https://ackee.example.com/api
-ACKEE_TOKEN=944c15eb-bc63-4435-8df4-0e6573079bb1
 ACKEE_EVENT_ID=a26932b8-a088-4fc1-b723-c3ea5b9ba9e4,6bad9a10-ed63-447b-b026-086b80da15d2
 URL=https://a.example.com,https://b.example.com
 AUDIT=speed-index.numericValue
