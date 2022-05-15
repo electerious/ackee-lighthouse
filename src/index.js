@@ -5,7 +5,7 @@ dotenv.config()
 import { Headers } from 'node-fetch'
 import chromeLauncher from 'chrome-launcher'
 import lighthouse from 'lighthouse'
-import dotProp from 'dot-prop'
+import { getProperty } from 'dot-prop'
 
 import signale from './utils/signale.js'
 import createAction from './api/createAction.js'
@@ -22,7 +22,7 @@ const createReport = async (endpoint, headers, event, url, audit, browser) => {
 
 	const action = {
 		key: audit,
-		value: dotProp.get(lhr.audits, audit),
+		value: getProperty(lhr.audits, audit),
 	}
 
 	await createAction(endpoint, headers, event, action)
