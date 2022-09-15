@@ -10,7 +10,7 @@ import { getProperty } from 'dot-prop'
 import signale from './utils/signale.js'
 import createAction from './api/createAction.js'
 
-const createReport = async (endpoint, headers, event, url, audit, browser) => {
+const createReport = async (url, audit, browser) => {
 	const { lhr } = await lighthouse(url, {
 		port: browser.port,
 	}, {
@@ -25,9 +25,7 @@ const createReport = async (endpoint, headers, event, url, audit, browser) => {
 		value: getProperty(lhr.audits, audit),
 	}
 
-	await createAction(endpoint, headers, event, action)
-
-	return action.value
+	return action
 }
 
 const createReports = async (endpoint, headers, events, urls, audit) => {
@@ -42,8 +40,10 @@ const createReports = async (endpoint, headers, events, urls, audit) => {
 		const url = urls[index]
 
 		signale.await(`Running tests for ${ url }`)
-		const value = await createReport(endpoint, headers, event, url, audit, browser)
-		signale.success(`Reported value ${ value } for ${ url } to event ${ event.id }`)
+		const action = await createReport(url, audit, browser)
+		signale.success(`Reporting value ${ action.value } for ${ url } to event ${ event.id }`)
+		const actionId = await createAction(endpoint, headers, event, action)
+		signale.success(`Created action with id ${ actionId }`)
 	}
 
 	await browser.kill()
