@@ -28,5 +28,5 @@ export default async (endpoint, headers, event, action) => {
 		throw new Error(message)
 	}
 
-	return data.data.createAction.payload
+	return data.data.createAction.payload.id
 }
