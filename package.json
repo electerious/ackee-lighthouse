@@ -33,9 +33,9 @@
   "dependencies": {
     "chrome-launcher": "^0.15.1",
     "dot-prop": "^7.2.0",
-    "dotenv": "^16.0.2",
-    "lighthouse": "^9.6.7",
-    "node-fetch": "^3.2.10",
+    "dotenv": "^16.0.3",
+    "lighthouse": "^9.6.8",
+    "node-fetch": "^3.3.0",
     "signale": "^1.4.0"
   },
   "eslintConfig": {
