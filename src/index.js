@@ -2,7 +2,6 @@ import dotenv from 'dotenv'
 
 dotenv.config()
 
-import { Headers } from 'node-fetch'
 import chromeLauncher from 'chrome-launcher'
 import lighthouse from 'lighthouse'
 import { getProperty } from 'dot-prop'
