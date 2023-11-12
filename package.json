@@ -17,9 +17,12 @@
   ],
   "type": "module",
   "scripts": {
+    "eslint": "eslint --ignore-path .gitignore '**/*.js'",
+    "prettier": "prettier --ignore-path .gitignore '**/*.{js,json,css,yml,md}'",
     "start": "node src/index.js",
     "test": "npm run lint",
-    "lint": "eslint \"src/**/*.js\""
+    "lint": "npm run eslint && npm run prettier -- --check",
+    "format": "npm run eslint -- --fix && npm run prettier -- --write"
   },
   "license": "MIT",
   "homepage": "https://github.com/electerious/ackee-lighthouse",
@@ -31,17 +34,21 @@
     "src"
   ],
   "dependencies": {
+    "@electerious/prettier-config": "^2.0.0",
     "chrome-launcher": "^1.1.0",
     "dot-prop": "^8.0.2",
     "dotenv": "^16.3.1",
     "lighthouse": "^11.2.0",
     "signale": "^1.4.0"
   },
+  "devDependencies": {
+    "@electerious/eslint-config": "^4.1.0"
+  },
   "eslintConfig": {
     "root": true,
-    "extends": "@electerious/eslint-config"
+    "extends": [
+      "@electerious/eslint-config"
+    ]
   },
-  "devDependencies": {
-    "@electerious/eslint-config": "^3.5.0"
-  }
+  "prettier": "@electerious/prettier-config"
 }

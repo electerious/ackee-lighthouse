@@ -2,11 +2,10 @@ name: Run
 
 on:
   schedule:
-    - cron:  '0 */1 * * *'
+    - cron: '0 */1 * * *'
 
 jobs:
   run:
-
     runs-on: ubuntu-latest
 
     steps:
