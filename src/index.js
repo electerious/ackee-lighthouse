@@ -18,7 +18,7 @@ const createReport = async (url, audit, browser) => {
 			extraHeaders: { Cookie: 'ackee_ignore=1' },
 		},
 	})
-
+	console.log(lhr.audits['speed-index'])
 	const action = {
 		key: audit,
 		value: getProperty(lhr.audits, audit),
