@@ -42,9 +42,17 @@ const createReports = async (endpoint, headers, events, urls, audit) => {
     const url = urls[index]
 
     signale.await(`Running tests for ${url}`)
+
     const action = await createReport(url, audit, browser)
+    if (action.value == null) {
+      signale.warn(`Lighthouse failed to create report for ${url}`)
+      continue
+    }
+
     signale.success(`Reporting value ${action.value} for ${url} to event ${event.id}`)
+
     const actionId = await createAction(endpoint, headers, event, action)
+
     signale.success(`Created action with id ${actionId}`)
   }
 
