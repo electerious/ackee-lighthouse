@@ -19,7 +19,7 @@ A script that runs continuously thanks to GitHub Actions and sends [Lighthouse](
 ackee-lighthouse dependents on …
 
 - [Node.js](https://nodejs.org/en/) (v18 or newer)
-- [yarn](https://yarnpkg.com/en/)
+- [npm](https://www.npmjs.com)
 - [Chrome](https://www.google.com/chrome/index.html)
 
 Make sure to install and update all dependencies before you continue. The installation instructions for the individual dependencies can be found on the linked websites.
@@ -48,7 +48,7 @@ AUDIT=speed-index.numericValue
 Install all required dependencies.
 
 ```sh
-yarn install
+npm install
 ```
 
 ### 4. Run ackee-lighthouse
@@ -58,7 +58,7 @@ ackee-lighthouse will create a Lighthouse report for every URL specified in the 
 Multiple URLs are handled so that the first URL uses the first event id, the second URL uses the second event id, and so on.
 
 ```sh
-yarn start
+npm start
 ```
 
 ## Miscellaneous

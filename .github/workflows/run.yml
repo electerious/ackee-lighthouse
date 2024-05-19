@@ -17,11 +17,13 @@ jobs:
           node-version: '20.x'
 
       - name: Install dependencies
-        run: yarn --production --frozen-lockfile
+        env:
+          NODE_ENV: production
+        run: npm ci
 
       - name: Start script
         env:
           ACKEE_ENDPOINT: ${{ secrets.ACKEE_ENDPOINT }}
           ACKEE_EVENT_ID: ${{ secrets.ACKEE_EVENT_ID }}
           URL: ${{ secrets.URL }}
-        run: yarn start
+        run: npm start
