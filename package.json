@@ -35,10 +35,10 @@
   ],
   "dependencies": {
     "@electerious/prettier-config": "^2.0.0",
-    "chrome-launcher": "^1.1.0",
+    "chrome-launcher": "^1.1.2",
     "dot-prop": "^8.0.2",
     "dotenv": "^16.4.5",
-    "lighthouse": "^11.6.0",
+    "lighthouse": "^12.1.0",
     "signale": "^1.4.0"
   },
   "devDependencies": {
