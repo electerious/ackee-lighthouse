@@ -4,7 +4,7 @@
 
 # ackee-lighthouse
 
-[![Donate via PayPal](https://img.shields.io/badge/paypal-donate-009cde.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CYKBESW577YWE)
+[![Test](https://github.com/electerious/ackee-lighthouse/actions/workflows/test.yml/badge.svg)](https://github.com/electerious/ackee-lighthouse/actions/workflows/test.yml) [![Donate via PayPal](https://img.shields.io/badge/paypal-donate-009cde.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=CYKBESW577YWE)
 
 A script that runs continuously thanks to GitHub Actions and sends [Lighthouse](https://developers.google.com/web/tools/lighthouse) reports the Ackee.
 
@@ -18,7 +18,7 @@ A script that runs continuously thanks to GitHub Actions and sends [Lighthouse](
 
 ackee-lighthouse dependents on …
 
-- [Node.js](https://nodejs.org/en/) (v18 or newer)
+- [Node.js](https://nodejs.org/en/) (v22 or newer)
 - [npm](https://www.npmjs.com)
 - [Chrome](https://www.google.com/chrome/index.html)
 
