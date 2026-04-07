@@ -1,6 +1,6 @@
 {
   "name": "ackee-lighthouse",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "private": true,
   "description": "Send Lighthouse reports to Ackee",
   "keywords": [
