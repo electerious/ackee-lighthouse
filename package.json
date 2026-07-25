@@ -15,7 +15,7 @@
   "homepage": "https://github.com/electerious/ackee-lighthouse",
   "repository": {
     "type": "git",
-    "url": "https://github.com/electerious/ackee-lighthouse.git"
+    "url": "git+https://github.com/electerious/ackee-lighthouse.git"
   },
   "license": "MIT",
   "type": "module",
