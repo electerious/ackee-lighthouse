@@ -32,15 +32,15 @@
   },
   "dependencies": {
     "chrome-launcher": "^1.2.1",
-    "dot-prop": "^10.1.0",
-    "lighthouse": "^13.4.0",
+    "dot-prop": "^10.2.0",
+    "lighthouse": "^13.4.1",
     "signale": "^1.4.0"
   },
   "devDependencies": {
     "@electerious/eslint-config": "^5.4.0",
     "@electerious/prettier-config": "^4.0.2",
-    "eslint": "^9.39.4",
-    "prettier": "^3.9.4"
+    "eslint": "^9.39.5",
+    "prettier": "^3.9.6"
   },
   "authors": [
     "Tobias Reich <tobias@electerious.com>"
