@@ -1,6 +1,6 @@
 {
   "name": "ackee-lighthouse",
-  "version": "4.0.1",
+  "version": "5.0.0",
   "private": true,
   "description": "Send Lighthouse reports to Ackee",
   "keywords": [
@@ -33,14 +33,14 @@
   "dependencies": {
     "chrome-launcher": "^1.2.1",
     "dot-prop": "^10.2.0",
-    "lighthouse": "^13.4.1",
+    "lighthouse": "^13.5.0",
     "signale": "^1.4.0"
   },
   "devDependencies": {
-    "@electerious/eslint-config": "^5.4.0",
+    "@electerious/eslint-config": "^6.0.0",
     "@electerious/prettier-config": "^5.0.0",
-    "eslint": "^9.39.5",
-    "prettier": "^3.9.6"
+    "eslint": "^10.8.1",
+    "prettier": "^3.9.8"
   },
   "authors": [
     "Tobias Reich <tobias@electerious.com>"

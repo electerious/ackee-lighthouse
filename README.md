@@ -18,7 +18,7 @@ A script that runs continuously thanks to GitHub Actions and sends [Lighthouse](
 
 ackee-lighthouse dependents on …
 
-- [Node.js](https://nodejs.org/en/) (v22 or newer)
+- [Node.js](https://nodejs.org/en/) (v24 or newer)
 - [npm](https://www.npmjs.com)
 - [Chrome](https://www.google.com/chrome/index.html)
 
